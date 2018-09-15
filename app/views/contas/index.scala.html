@@ -1,0 +1,17 @@
+@(contas : Set[Conta])
+
+<html>
+	<head>
+		<title> Todas as Contas</title>
+	</head>
+	<body>
+		<h1>Todas as contas</h1>
+				
+		@for(conta <- contas){
+			<a href="#">@conta.id</a>
+			<p>Titulo: @conta.titulo</p>
+  			<p>Vencimento: @conta.vencimento</p>
+ 			<p>Valor: @conta.valor</p>
+		}
+	</body>
+</html>
