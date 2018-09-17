@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/lucas/sistemas-web/conf/routes
-// @DATE:Sat Sep 15 01:07:55 BRT 2018
+// @SOURCE:/home/aluno/Sistemas-Web/conf/routes
+// @DATE:Mon Sep 17 16:56:25 BRT 2018
 
 package router
 

@@ -12,7 +12,7 @@ public class Conta {
   //public boolean pago;
 
   public Conta(){
-	  
+
   }
 
   public Conta(Integer id, String titulo, String vencimento, float valor) {
@@ -28,15 +28,26 @@ public class Conta {
      this.id = id;
   }
   public void setTitulo(String titulo){
-     this.Titulo = titulo;
+     this.titulo = titulo;
   }
   public void setVencimento(String vencimento){
      this.vencimento = vencimento;
   }
   public void setValor(float valor){
-     this.id = id;
+     this.valor = valor;
   }
-  
+  public Integer getId(){
+    return this.id;
+  }
+  public String getTitulo(){
+    return this.titulo;
+  }
+  public String getVencimento(){
+    return this.vencimento;
+  }
+  public float getValor(){
+    return this.valor;
+  }
 
   private static Set<Conta> contas;
 
@@ -50,7 +61,7 @@ public class Conta {
     return contas;
   }
 
-  public Conta findById(Integer id){
+  public static Conta findById(Integer id){
     for(Conta conta : contas){
       if(id.equals(conta.id)){
         return conta;

@@ -6,16 +6,16 @@
 		<title> Todas as Contas</title>
 	</head>
 	<body>
-		
+
 		<h1>Criar conta</h1>
-		@helper.form(action = routes.ContaController.save()){
+			@helper.form(action = routes.ContaController.save()){
 			@helper.inputText(contasForm("id"))
 			@helper.inputText(contasForm("titulo"))
 			@helper.inputText(contasForm("vencimento"))
 			@helper.inputText(contasForm("valor"))
-			
+
 			<input type="submit" value="Criar Conta">
 		}
-		
+
 	</body>
 </html>
