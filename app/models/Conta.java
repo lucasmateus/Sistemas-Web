@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Conta {
 
-  public Integer id;
-  public String titulo;
-  public String vencimento;
-  public float valor;
+  private Integer id;
+  private String titulo;
+  private String vencimento;
+  private float valor;
   //public boolean tipo;
   //public boolean pago;
 
@@ -24,6 +24,18 @@ public class Conta {
     //this.pago = true;
   }
 
+  public void setId(Integer id){
+     this.id = id;
+  }
+  public void setTitulo(String titulo){
+     this.Titulo = titulo;
+  }
+  public void setVencimento(String vencimento){
+     this.vencimento = vencimento;
+  }
+  public void setValor(float valor){
+     this.id = id;
+  }
   
 
   private static Set<Conta> contas;
