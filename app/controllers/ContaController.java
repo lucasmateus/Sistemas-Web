@@ -31,19 +31,31 @@ public class ContaController extends Controller{
 		
 		//para salvar uma conta
 		public Result save() {
-			Conta conta = formFactory.form(Conta.class).bindFromRequest().get();
+			//Conta conta = formFactory.form(Conta.class).bindFromRequest().get();
+			Form<Conta> contaForm = formFactory.form(Conta.class).bindFromRequest();
+			Conta conta = contaForm.get();
 			Conta.add(conta);
 			return redirect(routes.ContaController.index());
 		}
 		
 		//para editar uma conta
 		public Result edit(Integer id) {
-			return TODO;
+			Conta conta = Conta.findById(id);
+			if(conta == null) return notFound( s: "Conta não encontrada");
+			Form<Conta> contaForm = formFactory.form(Contas.class).fill(conta);
+
+			return ok(edit.render(contaForm));
 		}
 		//para atualizar conta
 		
 		public Result update() {
-			return TODO;
+			Conta conta = formFactory.form(Conta.class).bindFromRequest().get;
+			Conta contaAntiga = Conta.findById(conta.id);
+			if(contaAntiga == null) return notFound(s: "Conta não encontrada");
+			contaAntiga.titulo = conta.titulo;
+			contaAntiga.vencimento = conta.vencimento;
+			contaAntiga.valor = conta.valor;
+			return redirect(routes.ContaController.index());
 		}
 		
 		public Result destroy(Integer id) {

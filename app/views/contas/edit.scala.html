@@ -1,0 +1,19 @@
+@(contas : Set[Conta])
+
+<html>
+	<head>
+		<title> Editar Contas</title>
+	</head>
+	<body>
+		<h1>Editar Conta</h1>
+				
+		@helper.form(action = routes.ContaController.update()){
+			@helper.inputText(contasForm("id"))
+			@helper.inputText(contasForm("titulo"))
+			@helper.inputText(contasForm("vencimento"))
+			@helper.inputText(contasForm("valor"))
+			
+			<input type="submit" value="Criar Conta">
+		}
+	</body>
+</html>
