@@ -1,0 +1,15 @@
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+GET     /contatos             controllers.ContatosController.index
+GET     /contatos/edit/:id    controllers.ContatosController.edit(id: Integer)
+POST    /contatos/edit        controllers.ContatosController.update
+GET     /contatos/create      controllers.ContatosController.create
+GET     /contatos/:id         controllers.ContatosController.show(id: Integer)
+POST    /contatos/create      controllers.ContatosController.save
+GET     /contatos/delete/:id  controllers.ContatosController.destroy(id: Integer)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

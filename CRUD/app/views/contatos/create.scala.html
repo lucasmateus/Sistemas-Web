@@ -1,0 +1,18 @@
+@(formContato: Form[Contato])
+
+@import helper._
+
+<html>
+<body>
+<h1>Novo Contato</h1>
+
+@form(action=routes.ContatosController.save){
+  @helper.inputText(formContato("id"))
+  @helper.inputText(formContato("nome"))
+  @helper.inputText(formContato("email"))
+  @helper.inputText(formContato("telefone"))
+  <button action="submit">Criar</button>
+}
+</body>
+
+</html>
