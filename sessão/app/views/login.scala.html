@@ -1,0 +1,12 @@
+@()
+
+@main("Lista de Compras") {
+  <h1>Login</h1>
+  <form action="@routes.HomeController.autenticar()" method="POST">
+  <label for="login">Login:</label> 
+  <input id="login" type="text" name="login"> 
+  <label for="senha">Senha:</label>
+  <input id="senha" type="password" name="senha"> 
+  <button type="submit">Entrar</button>
+  </form>
+}

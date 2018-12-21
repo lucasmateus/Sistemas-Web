@@ -1,0 +1,17 @@
+@(lista: List[String], usuario: String)
+
+@main("Lista de Compras") {
+  <h1>Lista de Compras - @usuario</h1>
+  <form action="@routes.HomeController.save()">
+  <input type="text" name="item">
+  <button type="submit">Enviar</button>
+  <button type="submit" 
+    formaction="@routes.HomeController.clean()">Limpar</button>
+  <ul>
+  @for(item<-lista){
+	<li><a href="@routes.HomeController.remove(item)">@item</a>  
+  }
+  </ul>
+  
+  </form>
+}
