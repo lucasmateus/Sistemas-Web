@@ -2,13 +2,13 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET     /contatos             controllers.ContatosController.index
-GET     /contatos/edit/:id    controllers.ContatosController.edit(id: Integer)
-POST    /contatos/edit        controllers.ContatosController.update
-GET     /contatos/create      controllers.ContatosController.create
-GET     /contatos/:id         controllers.ContatosController.show(id: Integer)
-POST    /contatos/create      controllers.ContatosController.save
-GET     /contatos/delete/:id  controllers.ContatosController.destroy(id: Integer)
+GET     /contatos             controllers.BonecaController.index
+GET     /contatos/edit/:id    controllers.BonecaController.edit(id: Integer)
+POST    /contatos/edit        controllers.BonecaController.update
+GET     /contatos/create      controllers.BonecaController.create
+GET     /contatos/:id         controllers.BonecaController.show(id: Integer)
+POST    /contatos/create      controllers.BonecaController.save
+GET     /contatos/delete/:id  controllers.BonecaController.destroy(id: Integer)
 
 
 # Map static resources from the /public folder to the /assets URL path

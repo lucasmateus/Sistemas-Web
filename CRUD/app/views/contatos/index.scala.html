@@ -1,21 +1,22 @@
-@(contatos: Set[Contato])
+@(bonecas: Set[Boneca])
 
 <html>
 <body>
-<h1>Todos os Contatos</h1>
-  <form action="@routes.ContatosController.create">
+<h1>Todas as Bonecas</h1>
+  <form action="@routes.BonecaController.create">
     <button type="submit">Inserir</button>
   </form>
 <table>
-<tr><td>id</td><td>Nome</td><td>E-mail</td>
-<td>Telefone</td><td>Opções</td></tr>
-@for(contato <- contatos){
+<tr><td>id</td><td>Nome</td><td>Altura</td>
+<td>Marca</td><td>Opções</td></tr>
+@for(boneca <- bonecas){
   <tr>
-  <td><a href="@routes.ContatosController.show(contato.id)">@contato.id</a></td>
-  <td>@contato.nome</td>
-  <td>@contato.email</td>
-  <td>@contato.telefone</td>
-  <td><a href="@routes.ContatosController.destroy(contato.id)">Excluir</a></td>
+  <td>@boneca.id</td>
+  <td>@boneca.nome</td>
+  <td>@boneca.altura</td>
+  <td>@boneca.marca</td>
+  <td><a href="@routes.BonecaController.destroy(boneca.id)">Excluir</a></td>
+  <td><a href="@routes.BonecaController.show(boneca.id)">Editar</a><td>
   </tr>
 }
 </table>

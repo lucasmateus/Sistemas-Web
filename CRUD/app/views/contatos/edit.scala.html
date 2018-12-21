@@ -1,16 +1,16 @@
-@(formContato: Form[Contato])
+@(formBoneca: Form[Boneca])
 
 @import helper._
 
 <html>
 <body>
-<h1>Novo Contato</h1>
+<h1>Nova Boneca</h1>
 
-@form(action=routes.ContatosController.update()){
-  @helper.inputText(formContato("id"))
-  @helper.inputText(formContato("nome"))
-  @helper.inputText(formContato("email"))
-  @helper.inputText(formContato("telefone"))
+@form(action=routes.BonecaController.update()){
+  @helper.inputText(formBoneca("id"))
+  @helper.inputText(formBoneca("nome"))
+  @helper.inputText(formBoneca("email"))
+  @helper.inputText(formBoneca("telefone"))
   <button action="submit">Atualizar</button>
 }
 </body>
